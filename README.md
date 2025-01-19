@@ -1,6 +1,27 @@
-# students-managment-system
-A CRUD application built with Angular, PostgreSQL, and a backend API for managing student data.
+Student Management System (CRUD Application)
+This project is a Student Management System that allows you to manage student data efficiently. Built with Angular for the frontend, Express for the backend, and PostgreSQL for the database, it provides basic CRUD functionality to add, update, view, and delete student records.
 
+Project Structure
+Frontend: Angular
+Backend: Express
+Database: PostgreSQL
+Features
+Add Student: Add new student details to the database.
+Update Student: Edit existing student records.
+View Student: View individual student information.
+Delete Student: Remove a student record from the system.
+Development Server
+To run the development server, follow these steps:
+
+Frontend (Angular):
+
+Navigate to the frontend project directory.
+Run ng serve to start the development server.
+Open your browser and go to http://localhost:4200/.
+The application will reload automatically whenever you modify any source files.
+Backend (Express):
+
+The backend API runs on port 3000.
 # CrudApp
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 18.2.12.

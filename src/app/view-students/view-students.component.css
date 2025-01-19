@@ -1,0 +1,48 @@
+.view-students {
+    margin: 20px;
+  }
+  
+  h2 {
+    text-align: center;
+    color: #333;
+  }
+  
+  .students-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+  }
+  
+  .students-table th, .students-table td {
+    padding: 12px;
+    text-align: center;
+    border: 1px solid #ddd;
+  }
+  
+  .students-table th {
+    background-color: #4CAF50;
+    color: white;
+  }
+  
+  .students-table td {
+    background-color: #f2f2f2;
+  }
+  
+  .students-table tr:hover {
+    background-color: #ddd;
+  }
+  
+  .btn {
+    padding: 8px 12px;
+    margin: 5px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+  }
+  
+  .btn:hover {
+    background-color: #45a049;
+  }
+  

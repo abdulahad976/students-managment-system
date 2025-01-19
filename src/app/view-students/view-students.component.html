@@ -1,0 +1,31 @@
+<div class="view-students">
+    <h2>View All Students</h2>
+    <table class="students-table">
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Name</th>
+          <th>Age</th>
+          <th>Gender</th>
+          <th>Country</th>
+          <th>University</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let student of students">
+          <td>{{ student.id }}</td>
+          <td>{{ student.name }}</td>
+          <td>{{ student.age }}</td>
+          <td>{{ student.gender }}</td>
+          <td>{{ student.country }}</td>
+          <td>{{ student.university }}</td>
+          <td>
+            <button class="btn"[routerLink]="['/update-students', student.id]">Update</button>
+            <button class="btn" (click)="onDelete(student.id)">Delete</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  

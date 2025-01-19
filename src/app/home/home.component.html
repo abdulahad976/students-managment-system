@@ -1,0 +1,14 @@
+<header class="header">
+  <h1>Student Management System</h1>
+</header>
+
+<nav class="navbar">
+  <ul>
+    <li><a routerLink="/add-students">Add Student</a></li>
+    <li><a routerLink="/view-students">View Students</a></li>
+    <li><a (click)="onLogout()" routerLink="/login">Logout</a></li>
+  </ul>
+</nav>
+<main class="container">
+  <router-outlet></router-outlet>
+</main>

@@ -1,0 +1,28 @@
+<div class="update-students">
+    <h2>Update Student</h2>
+    <form (ngSubmit)="onUpdate()">
+      <div class="fields">
+        <label for="name">Name</label>
+        <input id="name" [(ngModel)]="student.name" name="name" required />
+      </div>
+      <div class="fields">
+        <label for="age">Age</label>
+        <input id="age" [(ngModel)]="student.age" name="age" type="number" required />
+      </div>
+      <div class="fields">
+        <label for="gender">Gender</label>
+        <input id="gender" [(ngModel)]="student.gender" name="gender" type="text" required />
+      </div>
+      <div class="fields">
+        <label for="country">Country</label>
+        <input id="country" [(ngModel)]="student.country" name="country" required />
+      </div>
+      <div class="fields">
+        <label for="university">University</label>
+        <input id="university" [(ngModel)]="student.university" name="university" type="text" required />
+      </div>
+      <button type="submit" class="btn">Update</button>
+      <button type="button" class="btn" routerLink="/view-students">Cancel</button>
+    </form>
+  </div>
+  
