@@ -1,3 +1,6 @@
+# students-managment-system
+A CRUD application built with Angular, PostgreSQL, and a backend API for managing student data.
+
 # CrudApp
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 18.2.12.
