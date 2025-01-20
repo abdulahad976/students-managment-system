@@ -46,3 +46,8 @@
     border-radius: 4px;
     cursor: pointer;
 }
+
+.alert {
+    color: red;
+    margin-top: 5px;
+  }

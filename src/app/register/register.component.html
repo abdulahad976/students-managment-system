@@ -1,19 +1,33 @@
 <div class="container">
     <h1>Register</h1>
-    <form (ngSubmit)="onSubmit()">
+    <form (ngSubmit)="onSubmit()" #registerForm="ngForm">
         <div class="fields">
             <label for="name">Name:</label>
-            <input type="text" id="name" [(ngModel)]="name" name="name" required>
-        </div>
-        <div class="fields">
+            <input type="text" id="name" [(ngModel)]="name" name="name" required #nameField="ngModel">
+            <div *ngIf="nameField.invalid && (nameField.dirty || nameField.touched)" class="alert">
+              <div *ngIf="nameField.errors?.['required']">Name is required.</div>
+            </div>
+          </div>
+        
+          <div class="fields">
             <label for="email">Email:</label>
-            <input type="email" id="email" [(ngModel)]="email" name="email" required>
-        </div>
-        <div class="fields">
+            <input type="email" id="email" [(ngModel)]="email" name="email" required #emailField="ngModel" email>
+            <div *ngIf="emailField.invalid && (emailField.dirty || emailField.touched)" class="alert">
+              <div *ngIf="emailField.errors?.['required']">Email is required.</div>
+              <div *ngIf="emailField.errors?.['email']">Invalid email format.</div>
+            </div>
+          </div>
+        
+          <div class="fields">
             <label for="password">Password:</label>
-            <input type="password" id="password" [(ngModel)]="password" name="password" required>
-        </div>
-        <button type="submit">Register</button>
+            <input type="password" id="password" [(ngModel)]="password" name="password" required #passwordField="ngModel" minlength="6">
+            <div *ngIf="passwordField.invalid && (passwordField.dirty || passwordField.touched)" class="alert">
+              <div *ngIf="passwordField.errors?.['required']">Password is required.</div>
+              <div *ngIf="passwordField.errors?.['minlength']">Password must be at least 6 characters long.</div>
+            </div>
+          </div>
+      
+        <button type="submit" [disabled]="registerForm.invalid">Register</button>
         <p>Already have an account? <a routerLink="/">Login</a></p>
     </form>
 </div>
