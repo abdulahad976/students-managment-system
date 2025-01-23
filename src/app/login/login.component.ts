@@ -19,21 +19,20 @@ export class LoginComponent {
 
   onSubmit() {
     const user = { email: this.email, password: this.password };
-  
-    this.userService.loginUser(user).subscribe(
-      (res: any) => {
-        if (res.token) {
-          localStorage.setItem('token', res.token);
+    
+    this.userService.loginUser(user).subscribe({
+      next: (res: any) => {
+        if (res.user) {
           this.router.navigate(['/view-students']); 
         } else {
-          alert("Invalid Credentials");
+          alert('Login failed');
         }
       },
-      (err) => {
+      error: (err) => {
         console.error('Login failed', err);
-        alert('Invalid Credentials.');
+        alert('Invalid credentials');
       }
-    );
+    });
   }
   
 }
