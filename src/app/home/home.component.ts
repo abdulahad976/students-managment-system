@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { RouterLink, RouterOutlet } from '@angular/router';
 import { ViewStudentsComponent } from '../view-students/view-students.component';
+import { UserServiceService } from '../services/user-service.service';
 
 @Component({
   selector: 'app-home',
@@ -10,8 +11,8 @@ import { ViewStudentsComponent } from '../view-students/view-students.component'
   styleUrl: './home.component.css'
 })
 export class HomeComponent {
-
+  constructor(private service: UserServiceService) { }
   onLogout(){
-    localStorage.removeItem('token')
+    this.service.logoutUser().subscribe();
   }
 }
